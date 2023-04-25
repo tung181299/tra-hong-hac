@@ -20,7 +20,7 @@ header .navbar p i:first-child{
     transform: rotate(90deg);
 }
 header .navbar p a{
-    color: #fff;
+    color: #ffffff;
     font-size: 0.9rem;
     transition: all 0.8s;
 }
@@ -31,12 +31,11 @@ header .navbar p a:hover{
 header .navbar .logo a {
     background-color: #333333;
     padding: 5px 10px;
+    color : #ffffff;
 }
-
 header .navbar-brand .logo1 img{
-    height: 150px;
+    max-width: 50%;
     border: 0;
-    
 }
 header .navbar-brand label {
     color: #FF4F81;
@@ -60,7 +59,14 @@ header .navbar-nav .nav-item.active::after {
     background-color: #FF4F81;
     display: block;
 }
+header .navbar .logo a{
+    transition: .5s all;
+}
 
+header .navbar .logo a:hover{
+    
+    color: #FF4F81;
+}
 header .navbar-nav .nav-item::after {
     content: '';
     width: 0;
@@ -603,3 +609,31 @@ footer .footer__submit .form-control:focus {
     color: #ff4f81;
 }
 /* END FOOTER */
+
+
+@media only screen and  (max-width: 736px){
+    header .navbar p{
+        padding-bottom: 5%;
+        padding-left: 5%;
+    }
+    header .navbar .logo {
+        text-align: center;
+        padding-left: 28%;
+    }
+    header .navbar-brand  {
+        margin: 0 auto;
+        width: 45%; 
+    }
+    header .navbar-brand .logo1 img{
+        max-width: 100%;
+        border: 0;
+    }
+    header .navbar-light .navbar-toggler{
+        margin-right:90%;
+        margin-top: -50%;
+    }
+    .navbar-light .navbar-toggler {
+        background-color: #ffffff;
+        border:0;
+    }
+}
