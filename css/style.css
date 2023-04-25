@@ -62,7 +62,10 @@ header .navbar-nav .nav-item.active::after {
 header .navbar .logo a{
     transition: .5s all;
 }
-
+header .bannerTitle h1{
+    margin-top: 5%;
+    text-align: center;
+}
 header .navbar .logo a:hover{
     
     color: #FF4F81;
@@ -612,13 +615,15 @@ footer .footer__submit .form-control:focus {
 
 
 @media only screen and  (max-width: 736px){
+    header .bannerTitle h1{
+        font-size: 2rem;
+    }
     header .navbar p{
-        padding-bottom: 5%;
-        padding-left: 5%;
+        padding-bottom: 0%;
+        margin:0 auto;
     }
     header .navbar .logo {
-        text-align: center;
-        padding-left: 28%;
+        margin: 0 auto;
     }
     header .navbar-brand  {
         margin: 0 auto;
