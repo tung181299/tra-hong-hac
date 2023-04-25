@@ -34,7 +34,7 @@ header .navbar .logo a {
     color : #ffffff;
 }
 header .navbar-brand .logo1 img{
-    max-width: 50%;
+    max-width: 70%;
     border: 0;
 }
 header .navbar-brand label {
@@ -619,7 +619,7 @@ footer .footer__submit .form-control:focus {
         font-size: 2rem;
     }
     header .navbar p{
-        padding-bottom: 0%;
+        line-height: 50px;
         margin:0 auto;
     }
     header .navbar .logo {
