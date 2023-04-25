@@ -149,6 +149,16 @@ header .navbar-nav .nav-item:hover .nav-link {
     max-height: 1000px;
     
 }
+.myCarousel .carousel-indicators{
+    background: transparent;
+    top:102%;
+}
+.myCarousel .carousel-indicators .active{
+    background-color: #b43056;
+}
+.myCarousel .carousel-indicators li{
+    background-color: gray;
+}
 .carousel-item button{
     background-color: Transparent;
     border: 1px solid #fff;
