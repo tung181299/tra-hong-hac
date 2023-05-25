@@ -28,7 +28,85 @@
   </head>
 
   <body>
-    <div id="header"></div>
+    <header>
+      <nav class="navbar">
+        <p class="my-auto">
+          <i class="fa fa-phone"></i>
+          <a href="tel:+456 123 7890">+456 123 7890</a>
+          <i class="fa fa-envelope ml-4"></i>
+          <a href="mailto: info@example.com"> info@example.com</a>
+        </p>
+        <div class="logo">
+          <a href=""><i class="fab fa-facebook-f"></i></a>
+          <a href=""><i class="fab fa-twitter"></i></a>
+          <a href=""><i class="fab fa-youtube"></i></a>
+          <a href=""><i class="fab fa-instagram"></i></a>
+        </div>
+      </nav>
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">
+            <div class="logo1">
+              <i
+                ><img
+                  src="./img/logo1.jpg"
+                  class="img-thumbnail w-100 mh-50"
+                  alt="logo1"
+              /></i>
+            </div>
+          </a>
+          <button
+            class="navbar-toggler expandMenu"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto mb-5">
+              <li class="nav-item active mr-lg-3">
+                <a class="nav-link mr-lg-3 font-weight-bold" href="index.html"
+                  >TRANG CHỦ</a
+                >
+              </li>
+              <li class="nav-item mr-lg-3">
+                <a class="nav-link" href="./pages/booking.html">ĐẶT CHỖ</a>
+              </li>
+              <li class="nav-item mr-lg-3">
+                <a class="nav-link" href="./pages/blog.html">BLOG</a>
+              </li>
+
+              <li class="nav-item dropdown mr-lg-3">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
+                  ABOUT US
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">HISTORY</a>
+                  <a class="dropdown-item" href="#">HISTORY2</a>
+                </div>
+              </li>
+              <li class="nav-item mr-lg-3">
+                <a class="nav-link" href="#">LIÊN HỆ</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
     <div class="container">
       <div class="text-lg-center bannerTitle">
         <h1>SẮP DIỄN RA</h1>
@@ -488,8 +566,7 @@
     </script>
     <script>
       $(function () {
-        $("#header").load("../assets/header.html");
-        $("#footer").load("../assets/footer.html");
+        $("#footer").load("assets/footer.html");
       });
     </script>
   </body>
