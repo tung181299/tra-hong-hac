@@ -42,7 +42,7 @@ header .navbar .logo a {
 }
 
 header .navbar-brand .logo1 img {
-  max-width: 70%;
+  max-width: 50%;
   border: 0;
 }
 
@@ -271,6 +271,41 @@ header .navbar-nav .nav-item:hover .nav-link {
   }
 }
 /* END CAROUSEL */
+
+/* TIET MUC */
+.tietmuc .container {
+}
+.tietmuc .tietmuc-img {
+  margin-bottom: 5%;
+}
+.tietmuc .tietmuc-img img {
+  width: 100%;
+}
+.tietmuc .tietmuc-content {
+  text-align: center;
+  position: relative;
+}
+.tietmuc .tietmuc-table {
+  margin: 5% auto;
+}
+.tietmuc .tietmuc-table th,
+tr,
+td {
+  border: 1px solid black;
+  padding: 20px;
+  font-weight: 600;
+}
+.tietmuc .tietmuc-table th {
+  font-size: 23px;
+  background: rgba(128, 128, 128, 0.152);
+}
+.tietmuc .seat {
+  margin-bottom: 5%;
+}
+.tietmuc .seat img {
+  width: 100%;
+  cursor: zoom-in;
+}
 /* SHOWS */
 .shows {
   margin-top: 50px;
@@ -741,4 +776,4 @@ footer .footer__submit .form-control:focus {
     background-color: #ffffff;
     border: 0;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
