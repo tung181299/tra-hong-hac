@@ -30,7 +30,44 @@
     <div id="header"></div>
     <div class="booking">
       <div class="container">
-        <form class="needs-validation" novalidate>
+        <form method="post" action="../php/booking.php">
+          <p>
+            <label for="name">Name: </label>
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Your full name"
+              autofocus
+              required
+            />
+          </p>
+          <p>
+            <label for="email">Email: </label>
+            <input type="email" name="email" id="email" />
+          </p>
+          <p>
+            <label for="cell">Cell: </label>
+            <input type="tel" name="cell" id="cell" />
+          </p>
+          <p>
+            <label for="dob">Date of birth: </label>
+            <input type="date" name="dob" id="dob" />
+          </p>
+          <p>
+            <label for="study">Years of art study: </label>
+            0 <input type="range" name="study" id="study" min="0" max="16" /> 16
+          </p>
+          <p style="text-align: center">
+            <input type="submit" name="submit" id="submit" value="Submit" />
+          </p>
+        </form>
+        <!-- <form
+          class="needs-validation"
+          novalidate
+          method="post"
+          action="../php/booking.php"
+        >
           <div class="form-row">
             <div class="col-md-6 mb-3">
               <label for="validationCustom01">First name</label>
@@ -108,7 +145,7 @@
             </div>
           </div>
           <button class="btn btn-primary" type="submit">Submit form</button>
-        </form>
+        </form> -->
       </div>
     </div>
     <div id="footer"></div>
