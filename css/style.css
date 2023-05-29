@@ -4,7 +4,23 @@
   padding: 0;
   box-sizing: border-box;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
 
+/* Track */
+::-webkit-scrollbar-track {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ab103cd3;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e43566d3;
+}
 html,
 body {
   font-family: "Work Sans", sans-serif;
@@ -177,7 +193,23 @@ header .navbar-nav .nav-item:hover .nav-link {
 .myCarousel .carousel-indicators li {
   background-color: gray;
 }
-
+.myCarousel .carousel-control-prev {
+  left: -15%;
+  opacity: 1;
+  color: red;
+}
+.myCarousel .carousel-control-next {
+  right: -15%;
+  opacity: 1;
+}
+.myCarousel .carousel-control-prev-icon {
+  background: url("../img/prev.svg");
+  background-repeat: no-repeat;
+}
+.myCarousel .carousel-control-next-icon {
+  background: url("../img/next.svg");
+  background-repeat: no-repeat;
+}
 .carousel-item button {
   background-color: Transparent;
   border: 1px solid #fff;
@@ -271,7 +303,17 @@ header .navbar-nav .nav-item:hover .nav-link {
   }
 }
 /* END CAROUSEL */
-
+.home-banner {
+  background: rgba(235, 229, 229, 0.556);
+}
+.home-banner h1 {
+  font-size: 2.5rem;
+  padding: 3% 0;
+  color: #b43056;
+}
+.home-banner .myCarousel .carousel-item {
+  margin-bottom: 100px;
+}
 /* TIET MUC */
 .tietmuc .container {
 }
@@ -408,10 +450,10 @@ td {
 /* END WELCOME */
 /* STATS */
 .stats {
-  background-image: url(../img/banner2.jpg);
+  background-image: url(../img/homeabout.jpg);
   text-align: center;
   background-attachment: fixed;
-  background-position: cover;
+  background-position: center;
   padding: 5rem 0;
 }
 
@@ -488,10 +530,11 @@ td {
 /* END OFFER */
 /* TESTIMONIALS */
 .testimonials {
-  background-image: url(../img/banner3.jpg);
+  background-image: url(../img/testimonial.jpg);
   position: cover;
   background-attachment: fixed;
   padding: 6rem;
+  background-position: center;
 }
 
 .testimonials__title h3 {
@@ -606,7 +649,7 @@ td {
 
 .news__items .news__text p {
   font-size: 13px;
-  color: #999;
+
   margin-top: 15px;
   line-height: 2;
 }
@@ -776,4 +819,42 @@ footer .footer__submit .form-control:focus {
     background-color: #ffffff;
     border: 0;
   }
+  .home-banner h1 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .testimonials__item {
+    padding: 0;
+  }
+  .testimonials__img,
+  .testimonials__text {
+    width: 100%;
+    transform: translateX(-25px);
+  }
+  .testimonials .owl-dots {
+    display: none;
+  }
 } /*# sourceMappingURL=style.css.map */
+.booking form {
+  width: 500px;
+  margin: 0 auto;
+}
+.booking h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #b43056;
+  margin-bottom: 5%;
+}
+.booking form button {
+  margin: 5% 0;
+}
+.news .news__items a {
+  text-decoration: none;
+  color: #0f0f10;
+}
+.news .news__items h3 {
+  margin-top: 3%;
+}
+.news .news__items h3:hover {
+  color: #b43056;
+}

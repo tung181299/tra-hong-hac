@@ -29,123 +29,90 @@
   <body>
     <div id="header"></div>
     <div class="booking">
+      <h1>Đặt Chỗ</h1>
       <div class="container">
-        <form method="post" action="../php/booking.php">
-          <p>
-            <label for="name">Name: </label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Your full name"
-              autofocus
-              required
-            />
-          </p>
-          <p>
-            <label for="email">Email: </label>
-            <input type="email" name="email" id="email" />
-          </p>
-          <p>
-            <label for="cell">Cell: </label>
-            <input type="tel" name="cell" id="cell" />
-          </p>
-          <p>
-            <label for="dob">Date of birth: </label>
-            <input type="date" name="dob" id="dob" />
-          </p>
-          <p>
-            <label for="study">Years of art study: </label>
-            0 <input type="range" name="study" id="study" min="0" max="16" /> 16
-          </p>
-          <p style="text-align: center">
-            <input type="submit" name="submit" id="submit" value="Submit" />
-          </p>
-        </form>
-        <!-- <form
-          class="needs-validation"
-          novalidate
-          method="post"
-          action="../php/booking.php"
-        >
+        <form class="needs-validation" novalidate method="post" id="myForm">
           <div class="form-row">
-            <div class="col-md-6 mb-3">
-              <label for="validationCustom01">First name</label>
+            <div class="col-md-7 mb-3">
+              <label for="validationCustom01">Họ và Tên</label>
               <input
                 type="text"
                 class="form-control"
                 id="validationCustom01"
+                name="name"
                 required
               />
-              <div class="valid-feedback">Looks good!</div>
-              <div class="invalid-feedback">
-                Please provide your first name.
-              </div>
+              <div class="valid-feedback">OK!</div>
+              <div class="invalid-feedback">Xin hãy nhập họ tên</div>
             </div>
-            <div class="col-md-6 mb-3">
-              <label for="validationCustom02">Last name</label>
+            <div class="col-md-5 mb-3">
+              <label for="validationCustom02">Số điện thoại</label>
               <input
                 type="text"
                 class="form-control"
                 id="validationCustom02"
+                name="phone"
                 required
               />
-              <div class="valid-feedback">Looks good!</div>
-              <div class="invalid-feedback">Please provide your last name.</div>
+              <div class="valid-feedback">OK!</div>
+              <div class="invalid-feedback">Xin hãy nhập số điện thoại</div>
             </div>
           </div>
           <div class="form-row">
-            <div class="col-md-6 mb-3">
-              <label for="validationCustom03">City</label>
+            <div class="col-md-12 mb-3">
+              <label for="validationCustom03">Email</label>
               <input
-                type="text"
+                type="email"
                 class="form-control"
                 id="validationCustom03"
+                name="email"
                 required
               />
-              <div class="valid-feedback">Looks good!</div>
-              <div class="invalid-feedback">Please provide a valid city.</div>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="validationCustom04">State</label>
-              <select class="custom-select" id="validationCustom04" required>
-                <option selected disabled value="">Choose...</option>
-                <option>...</option>
-              </select>
-              <div class="valid-feedback">Looks good!</div>
-              <div class="invalid-feedback">Please select a valid state.</div>
-            </div>
-            <div class="col-md-3 mb-3">
-              <label for="validationCustom05">Zip</label>
-              <input
-                type="text"
-                class="form-control"
-                id="validationCustom05"
-                required
-              />
-              <div class="valid-feedback">Looks good!</div>
-              <div class="invalid-feedback">Please provide a valid zip.</div>
-            </div>
-          </div>
-          <div class="form-group">
-            <div class="form-check">
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value=""
-                id="invalidCheck"
-                required
-              />
-              <label class="form-check-label" for="invalidCheck">
-                Agree to terms and conditions
-              </label>
+              <div class="valid-feedback">OK!</div>
               <div class="invalid-feedback">
-                You must agree before submitting.
+                Xin hãy nhập đúng định dạng email
               </div>
             </div>
           </div>
-          <button class="btn btn-primary" type="submit">Submit form</button>
-        </form> -->
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+              <label for="validationCustom04">Chọn tiết mục</label>
+              <select
+                class="custom-select"
+                id="validationCustom04"
+                name="show"
+                required
+              >
+                <option selected disabled value="">Hãy chọn show diễn</option>
+                <option>Vũ Thảo My | Quang Trung - 27.04.2023</option>
+                <option>Nam Em & Quốc Thủy - 12.05.2023</option>
+                <option>Ta & Trịnh - 12.04.2023</option>
+              </select>
+              <div class="valid-feedback">OK!</div>
+              <div class="invalid-feedback">Xin hãy chọn show diễn</div>
+            </div>
+            <div class="col-md-6 mb-3">
+              <label for="validationCustom04">Loại ghế</label>
+              <select
+                class="custom-select"
+                id="validationCustom04"
+                name="seat"
+                required
+              >
+                <option selected disabled value="">Hãy chọn loại ghế</option>
+                <option>Phổ thông</option>
+                <option>Vip</option>
+                <option>Premium</option>
+              </select>
+              <div class="valid-feedback">Looks good!</div>
+              <div class="invalid-feedback">Xin hãy chọn loại ghế</div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary" type="submit " onclick="SubForm()">
+            GỬI
+          </button>
+        </form>
       </div>
     </div>
     <div id="footer"></div>
@@ -193,6 +160,21 @@
           false
         );
       })();
+    </script>
+    <script>
+      function SubForm() {
+        $.ajax({
+          url: "https://api.apispreadsheets.com/data/vt3uUC6K7WTSmDT7/",
+          type: "post",
+          data: $("#myForm").serializeArray(),
+          success: function () {
+            alert("Form Data Submitted :)");
+          },
+          error: function () {
+            alert("There was an error :(");
+          },
+        });
+      }
     </script>
   </body>
 </html>
