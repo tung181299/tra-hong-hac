@@ -193,20 +193,23 @@ header .navbar-nav .nav-item:hover .nav-link {
 .myCarousel .carousel-indicators li {
   background-color: gray;
 }
-.myCarousel .carousel-control-prev {
+.myCarousel .carousel-control-prev,
+.blog-carousel .carousel-control-prev {
   left: -15%;
-  opacity: 1;
-  color: red;
+  opacity: 0.5;
 }
-.myCarousel .carousel-control-next {
+.myCarousel .carousel-control-next,
+.blog-carousel .carousel-control-next {
   right: -15%;
-  opacity: 1;
+  opacity: 0.5;
 }
-.myCarousel .carousel-control-prev-icon {
+.myCarousel .carousel-control-prev-icon,
+.blog-carousel .carousel-control-prev-icon {
   background: url("../img/prev.svg");
   background-repeat: no-repeat;
 }
-.myCarousel .carousel-control-next-icon {
+.myCarousel .carousel-control-next-icon,
+.blog-carousel .carousel-control-next-icon {
   background: url("../img/next.svg");
   background-repeat: no-repeat;
 }
@@ -355,9 +358,7 @@ td {
 }
 .shows .item {
   display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  max-width: 500px;
+
   margin: 0 auto;
   transition: 0.3s;
 }
@@ -836,7 +837,7 @@ footer .footer__submit .form-control:focus {
   }
 } /*# sourceMappingURL=style.css.map */
 .booking form {
-  width: 500px;
+  width: 60%;
   margin: 0 auto;
 }
 .booking h1 {
@@ -857,4 +858,33 @@ footer .footer__submit .form-control:focus {
 }
 .news .news__items h3:hover {
   color: #b43056;
+}
+/* blog */
+.blog .blog-carousel {
+  margin-bottom: 10%;
+}
+.blog .blog-carousel .carousel-item img {
+  width: 100%;
+  height: 350px;
+}
+.blog .item img {
+  width: 100%;
+}
+.blog .carousel-indicators {
+  margin-top: 15%;
+}
+.blog .carousel-indicators li {
+  background-color: #e62b62;
+  height: 10px;
+  width: 10px;
+  margin: 0 2%;
+}
+.blog h2 {
+  color: #ff4f81;
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 2.5rem;
+}
+.blog .item img {
+  height: 257px;
 }
