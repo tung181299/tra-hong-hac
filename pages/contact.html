@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+    />
+    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="../css/style.css" />
+
+    <title>Tra Hong Hac</title>
+  </head>
+
+  <body>
+    <div id="header"></div>
+    <div class="contact">
+      <h1>Liên hệ</h1>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="contact-content">
+              <p>Địa chỉ liên hệ</p>
+              <p>SĐT</p>
+              <p>Email</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <form
+              action=""
+              class="needs-validation"
+              novalidate
+              id="contact-form"
+            >
+              <div class="form-group">
+                <label for="name">Họ và Tên</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Nhập họ tên"
+                  name="name"
+                  required
+                />
+                <div class="valid-feedback">OK!</div>
+                <div class="invalid-feedback">Xin hãy nhập họ tên đầy đủ!</div>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  placeholder="Nhập Email"
+                  name="email"
+                  required
+                />
+                <div class="valid-feedback">OK!</div>
+                <div class="invalid-feedback">Xin hãy nhập địa chỉ Email!</div>
+              </div>
+              <div class="form-group">
+                <label for="phone">Số Điện Thoại</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="phone"
+                  placeholder="Nhập SĐT"
+                  name="phone"
+                  required
+                />
+                <div class="valid-feedback">OK!</div>
+                <div class="invalid-feedback">Xin hãy nhập số điện thoại</div>
+                <div class="form-group">
+                  <label for=""></label>
+                  <textarea
+                    class="form-control"
+                    name="content"
+                    id="content"
+                    rows="5"
+                    placeholder="Hãy nhập nội dung"
+                  ></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary">Gửi</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="footer"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script>
+      $(function () {
+        $("#header").load("../assets/header.html");
+        $("#footer").load("../assets/footer.html");
+      });
+    </script>
+    <script>
+      // Disable form submissions if there are invalid fields
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            // Get the forms we want to add validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(
+              forms,
+              function (form) {
+                form.addEventListener(
+                  "submit",
+                  function (event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                      alert("Xin Hãy Nhập Đầy Đủ Thông Tin");
+                    }
+                    form.classList.add("was-validated");
+
+                    if (form.checkValidity() === true) {
+                      $.ajax({
+                        url: "https://api.apispreadsheets.com/data/MtX7Hl7LkvlfiLFl/",
+                        type: "post",
+                        data: $("#contact-form").serializeArray(),
+                      });
+                      alert("Thông tin liên hệ đã được gửi đi!");
+                    }
+                  },
+                  false
+                );
+              }
+            );
+          },
+          false
+        );
+      })();
+    </script>
+    <script>
+      function SubContactForm() {}
+    </script>
+  </body>
+</html>
