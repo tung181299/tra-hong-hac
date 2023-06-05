@@ -203,6 +203,12 @@ header .navbar-nav .nav-item:hover .nav-link {
   right: -15%;
   opacity: 0.5;
 }
+.myCarousel .carousel-control-prev:hover {
+  opacity: 1;
+}
+.myCarousel .carousel-control-next:hover {
+  opacity: 1;
+}
 .myCarousel .carousel-control-prev-icon,
 .blog-carousel .carousel-control-prev-icon {
   background: url("../img/prev.svg");
@@ -350,6 +356,9 @@ td {
 .tietmuc .seat img {
   width: 100%;
   cursor: zoom-in;
+}
+.tietmuc h3 {
+  text-align: center;
 }
 /* SHOWS */
 .shows {
@@ -925,4 +934,24 @@ html.is-leaving .transition-fade {
   width: 100%;
   position: fixed;
   z-index: 100;
+}
+.button-ticket {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+.button-ticket button {
+  padding: 20px 50px;
+  color: #e62b62;
+  background-color: #000;
+  transition: 0.5s;
+  font-weight: 500;
+}
+.button-ticket button:hover {
+  color: #fff;
+  background: #e62b62;
+}
+.button-ticket button::after {
+  content: "";
+  background: red;
 }
