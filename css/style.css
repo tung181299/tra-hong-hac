@@ -888,3 +888,41 @@ footer .footer__submit .form-control:focus {
 .blog .item img {
   height: 257px;
 }
+.contact h1 {
+  text-align: center;
+  margin-bottom: 2%;
+}
+.contact .contact-content {
+  background: url("../img/z4279457571916_78ec9c28be4ae59d68cbcd3442978763.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 450px;
+  width: 500px;
+}
+.contact .contact-content p {
+  margin-left: 2%;
+  color: white;
+}
+.transition-fade {
+  opacity: 1;
+  transition: 500ms;
+  transform: translateX(0);
+  transform-origin: left;
+}
+html.is-animating .transition-fade {
+  opacity: 1;
+  transform: translateX(100%);
+}
+html.is-leaving .transition-fade {
+  opacity: 0;
+  transform: translateX(0);
+}
+#preloader {
+  background: #000 url("../img/loading.gif") no-repeat center center;
+  height: 100vh;
+  background-size: 15%;
+  width: 100%;
+  position: fixed;
+  z-index: 100;
+}

@@ -20,7 +20,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
     />
-    <link rel="shortcut icon" href="./img/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="../css/style.css" />
 
     <title>Tra Hong Hac</title>
@@ -109,9 +109,7 @@
             </div>
           </div>
 
-          <button class="btn btn-primary" type="submit " onclick="SubForm()">
-            GỬI
-          </button>
+          <button class="btn btn-primary" type="submit">GỬI</button>
         </form>
       </div>
     </div>
@@ -149,8 +147,17 @@
                     if (form.checkValidity() === false) {
                       event.preventDefault();
                       event.stopPropagation();
+                      alert("Xin Hãy Nhập Đầy Đủ Thông Tin");
                     }
                     form.classList.add("was-validated");
+                    if (form.checkValidity() === true) {
+                      $.ajax({
+                        url: "https://api.apispreadsheets.com/data/MtX7Hl7LkvlfiLFl/",
+                        type: "post",
+                        data: $("#contact-form").serializeArray(),
+                      });
+                      alert("Thông tin đã được gửi đi!");
+                    }
                   },
                   false
                 );
@@ -160,21 +167,6 @@
           false
         );
       })();
-    </script>
-    <script>
-      function SubForm() {
-        $.ajax({
-          url: "https://api.apispreadsheets.com/data/vt3uUC6K7WTSmDT7/",
-          type: "post",
-          data: $("#myForm").serializeArray(),
-          success: function () {
-            alert("Form Data Submitted :)");
-          },
-          error: function () {
-            alert("There was an error :(");
-          },
-        });
-      }
     </script>
   </body>
 </html>
