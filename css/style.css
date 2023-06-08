@@ -927,7 +927,7 @@ html.is-leaving .transition-fade {
   transform: translateX(0);
 }
 #preloader {
-  background: #000 url("../img/loading.gif") no-repeat center center;
+  background: #fff url("../img/load-1110_256.gif") no-repeat center center;
   height: 100vh;
   background-size: 20%;
   width: 100%;
